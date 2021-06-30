@@ -62,35 +62,34 @@ fn link_libs_unix(){
 
 // MAC_OS
 fn link_libs_macos(){
-    let project_dir = env::var("CARGO_MANIFEST_DIR").unwrap();
     // Need to include this so I can call core functions and security functions on mac
     println!("cargo:rustc-link-lib=framework=CoreFoundation");
     println!("cargo:rustc-link-lib=framework=Security");
     // fuck me im clever for figuring this shit out
 
-    println!("cargo:rustc-link-search={}/pjlibs/mac_os", project_dir);
+    println!("cargo:rustc-link-search=/usr/local/lib/");
 
-    println!("cargo:rustc-link-lib=pjsua-x86_64-apple-darwin17.7.0");
-    println!("cargo:rustc-link-lib=pjsip-x86_64-apple-darwin17.7.0");
-    println!("cargo:rustc-link-lib=pj-x86_64-apple-darwin17.7.0");
-    println!("cargo:rustc-link-lib=pjsip-simple-x86_64-apple-darwin17.7.0");
-    println!("cargo:rustc-link-lib=pjsua2-x86_64-apple-darwin17.7.0");
-    println!("cargo:rustc-link-lib=pjsip-ua-x86_64-apple-darwin17.7.0");
-    println!("cargo:rustc-link-lib=pjmedia-codec-x86_64-apple-darwin17.7.0");
-    println!("cargo:rustc-link-lib=pjsdp-x86_64-apple-darwin17.7.0");
-    println!("cargo:rustc-link-lib=pjmedia-videodev-x86_64-apple-darwin17.7.0");	
-    println!("cargo:rustc-link-lib=pjmedia-audiodev-x86_64-apple-darwin17.7.0");	
-    println!("cargo:rustc-link-lib=pjmedia-x86_64-apple-darwin17.7.0");
-    println!("cargo:rustc-link-lib=pjnath-x86_64-apple-darwin17.7.0");
-    println!("cargo:rustc-link-lib=pjlib-util-x86_64-apple-darwin17.7.0");	
-    println!("cargo:rustc-link-lib=yuv-x86_64-apple-darwin17.7.0");
-    println!("cargo:rustc-link-lib=ilbccodec-x86_64-apple-darwin17.7.0");	
-    println!("cargo:rustc-link-lib=g7221codec-x86_64-apple-darwin17.7.0");	
-    println!("cargo:rustc-link-lib=gsmcodec-x86_64-apple-darwin17.7.0");
-    println!("cargo:rustc-link-lib=resample-x86_64-apple-darwin17.7.0");
-    println!("cargo:rustc-link-lib=srtp-x86_64-apple-darwin17.7.0");
-    println!("cargo:rustc-link-lib=webrtc-x86_64-apple-darwin17.7.0");
-    println!("cargo:rustc-link-lib=speex-x86_64-apple-darwin17.7.0");   
+    println!("cargo:rustc-link-lib=pjsua-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=pjsip-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=pj-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=pjsip-simple-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=pjsua2-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=pjsip-ua-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=pjmedia-codec-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=pjsdp-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=pjmedia-videodev-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=pjmedia-audiodev-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=pjmedia-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=pjnath-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=pjlib-util-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=yuv-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=ilbccodec-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=g7221codec-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=gsmcodec-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=resample-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=srtp-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=webrtc-x86_64-apple-darwin19.5.0");
+    println!("cargo:rustc-link-lib=speex-x86_64-apple-darwin19.5.0");
 
 }
 
