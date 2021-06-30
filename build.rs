@@ -76,8 +76,7 @@ fn link_libs_macos(){
     println!("cargo:rustc-link-lib=libpjsua2-x86_64-apple-darwin19.5.0");
     println!("cargo:rustc-link-lib=libpjsip-ua-x86_64-apple-darwin19.5.0");
     println!("cargo:rustc-link-lib=libpjmedia-codec-x86_64-apple-darwin19.5.0");
-    println!("cargo:rustc-link-lib=libpjsdp-x86_64-apple-darwin19.5.0");
-    println!("cargo:rustc-link-lib=libpjmedia-videodev-x86_64-apple-darwin19.5.0");
+        println!("cargo:rustc-link-lib=libpjmedia-videodev-x86_64-apple-darwin19.5.0");
     println!("cargo:rustc-link-lib=libpjmedia-audiodev-x86_64-apple-darwin19.5.0");
     println!("cargo:rustc-link-lib=libpjmedia-x86_64-apple-darwin19.5.0");
     println!("cargo:rustc-link-lib=libpjnath-x86_64-apple-darwin19.5.0");
